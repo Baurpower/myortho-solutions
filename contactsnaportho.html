@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SnapOrtho</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | SnapOrtho</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
@@ -18,9 +18,9 @@
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -30,7 +30,6 @@
       line-height: 1.6;
     }
 
-    /* Navbar */
     nav {
       background-color: var(--bg-dark);
       display: flex;
@@ -101,65 +100,52 @@
       background-color: var(--bg-dark);
       color: var(--text-light);
       text-align: center;
-      padding: 60px 20px 80px;
-    }
-
-    header img.logo {
-      width: 110px;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 25px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      padding: 60px 20px 40px;
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       opacity: 0.9;
     }
 
-    .store-button {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: var(--accent);
-      color: #fff;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .store-button:hover {
-      background-color: var(--accent-hover);
-      transform: scale(1.05);
-    }
-
-    .screenshots {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      padding: 60px 40px;
-      background-color: #fff;
-    }
-
-    .screenshots img {
-      width: 100%;
+    .contact-section {
+      padding: 60px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
-    .screenshots img:hover {
-      transform: translateY(-5px);
+    .contact-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .info {
+      margin-bottom: 40px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .form-wrapper iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
     }
 
     footer {
@@ -168,20 +154,21 @@
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9rem;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
+   <!-- NAVIGATION -->
+   <nav>
     <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <div class="dropdown">
         <a href="snaportho.html" class="dropbtn">SnapOrtho ▾</a>
         <div class="dropdown-content">
-          <a href="snaportho.html">About</a>
+          <a href="aboutsnaportho.html">About</a>
           <a href="contactsnaportho.html">Contact</a>
         </div>
       </div>
@@ -190,18 +177,22 @@
 
   <!-- HEADER -->
   <header>
-    <img src="snaportho-logo.png" alt="SnapOrtho Logo" class="logo" />
-    <h1>SnapOrtho</h1>
-    <p>Memorize. Master. Excel in Orthopaedics.</p>
-    <a href="https://apps.apple.com/us/app/snaportho/id6742800145" class="store-button" target="_blank">Download on the App Store</a>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you</p>
   </header>
 
-  <!-- SCREENSHOTS -->
-  <section class="screenshots">
-    <img src="snap1.png" alt="SnapOrtho App Screenshot 1" />
-    <img src="snap2.png" alt="SnapOrtho App Screenshot 2" />
-    <img src="snap3.png" alt="SnapOrtho App Screenshot 3" />
-    <img src="snap4.png" alt="SnapOrtho App Screenshot 4" />
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2>Reach Out to SnapOrtho</h2>
+
+    <div class="info">
+      📧 Email: <a href="mailto:alexbaur123@gmail.com">alexbaur123@gmail.com</a><br><br>
+      🐦 X (Twitter): <a href="https://x.com/snaportho" target="_blank">@snaportho</a>
+    </div>
+
+    <div class="form-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5EVQlffTLq_iRGHIt5TPvZuClJ_EMzqredZP9xptc0NpPdg/viewform?embedded=true" allowfullscreen>Loading…</iframe>
+    </div>
   </section>
 
   <!-- FOOTER -->

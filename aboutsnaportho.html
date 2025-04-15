@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | SnapOrtho</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f9fafb;
+      --bg-dark: #1f2937;
+      --text-light: #ffffff;
+      --text-dark: #111827;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    nav {
+      background-color: var(--bg-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+    }
+
+    .nav-logo {
+      font-size: 1.25rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2d3748;
+      border-radius: 6px;
+      min-width: 140px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #39465a;
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section h2 {
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      background-color: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .mission-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mission-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+      color: #1f2937;
+    }
+
+    .mission-text hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 16px 0;
+    }
+
+    .mission-icons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .icon-box {
+      flex: 1 1 30%;
+      background-color: #f3f4f6;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+      text-align: center;
+      transition: transform 0.2s ease;
+      min-width: 200px;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-box span {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .icon-box h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .icon-box p {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    /* Team Section */
+    .team-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .member-card {
+      flex: 0 0 200px;
+      background: white;
+      padding: 14px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      text-align: center;
+      scroll-snap-align: start;
+    }
+
+    .member-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .member-card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .member-card span {
+      font-size: 0.82rem;
+      color: #555;
+    }
+
+    /* Consultants Section */
+    .consultants-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .consultants-box p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="snaportho.html" class="dropbtn">SnapOrtho ▾</a>
+        <div class="dropdown-content">
+          <a href="aboutsnaportho.html">About</a>
+          <a href="contactsnaportho.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>About SnapOrtho</h1>
+  </header>
+
+  <div class="content">
+
+    <div class="section mission-section">
+      <h2>Our Mission</h2>
+      <div class="mission-grid">
+        <div class="mission-text">
+          <p><strong>SnapOrtho</strong> tackles the memory overload of orthopaedic training with sleek, intuitive tools.</p>
+          <hr>
+          <p>We turn <strong>frustration</strong> into <strong>fluid recall</strong> — ideal for conference prep or rounds, all in your pocket.</p>
+          <hr>
+          <p>Our mission: blend <strong>clean design</strong> and <strong>high-yield visuals</strong> so you can memorize, master, and move fast.</p>
+        </div>
+        <div class="mission-icons">
+          <div class="icon-box">
+            <span>🧠</span>
+            <h4>Memory Made Simple</h4>
+            <p>Clean mnemonics for tricky eponyms.</p>
+          </div>
+          <div class="icon-box">
+            <span>📱</span>
+            <h4>Reference On the Go</h4>
+            <p>Just-in-time info for busy trainees.</p>
+          </div>
+          <div class="icon-box">
+            <span>🚀</span>
+            <h4>Built by Meds for Meds</h4>
+            <p>We get the grind. We designed for it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Leadership Team</h2>
+      <div class="team-carousel">
+        <div class="member-card">
+          <img src="alexbaurheadshot.jpg" alt="Alexander Baur Headshot">
+          <h3>Alexander Baur</h3>
+          <span>Founder, CEO, Developer</span>
+        </div>
+        <div class="member-card">
+          <img src="bradbaurheadshot.jpeg" alt="Bradford Baur Headshot">
+          <h3>Bradford Baur</h3>
+          <span>Chief Operating Officer (COO)</span>
+        </div>
+        <div class="member-card">
+          <img src="austinheadshot.jpg" alt="Austin Nguyen Headshot">
+          <h3>Austin Nguyen, MD</h3>
+          <span>Senior Division Manager, Developer</span>
+        </div>
+        <div class="member-card">
+          <img src="beccaheadshot.jpg" alt="Rebecca Baur Headshot">
+          <h3>Rebecca Baur</h3>
+          <span>Chief Marketing Officer (CMO)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Consultants</h2>
+      <div class="consultants-box">
+        <p>
+          SnapOrtho is backed by a growing network of physicians, residents, and educators who ensure
+          our platform remains clinically sharp and educationally relevant. Their insight shapes everything—
+          from app structure to content clarity.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 MyOrtho Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>
