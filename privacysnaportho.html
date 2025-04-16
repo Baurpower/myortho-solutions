@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | SnapOrtho</title>
+  <title>Privacy Policy | SnapOrtho</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-light: #f4f4f4;
+      --bg-light: #f9fafb;
       --bg-dark: #1f2937;
       --text-light: #ffffff;
       --text-dark: #111827;
@@ -36,12 +36,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 14px 28px;
       flex-wrap: wrap;
     }
 
     .nav-logo {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       color: white;
       font-weight: bold;
       text-decoration: none;
@@ -50,21 +50,20 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
       color: var(--accent);
     }
 
-    /* Hamburger menu button for mobile */
+    /* Hamburger menu for mobile */
     .menu-toggle {
       display: none;
       background: none;
@@ -74,38 +73,32 @@
       cursor: pointer;
     }
 
-    /* Dropdown styles */
     .dropdown {
       position: relative;
-      display: inline-block;
-    }
-
-    .dropbtn {
-      cursor: pointer;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: #2d3748;
-      min-width: 160px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      z-index: 1;
       border-radius: 6px;
+      min-width: 140px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
     .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
       display: block;
+      color: white;
+      padding: 10px 14px;
       text-decoration: none;
+      font-size: 0.95rem;
     }
 
     .dropdown-content a:hover {
-      background-color: #3b4656;
+      background-color: #39465a;
     }
 
-    /* On desktop, show dropdown on hover */
+    /* Display dropdown on hover for desktop */
     .dropdown:hover .dropdown-content {
       display: block;
     }
@@ -115,9 +108,9 @@
       display: none;
       background: none;
       border: none;
-      cursor: pointer;
       font-size: 1rem;
       color: white;
+      cursor: pointer;
       margin-left: 5px;
     }
 
@@ -126,62 +119,58 @@
       background-color: var(--bg-dark);
       color: var(--text-light);
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 30px 10px;
     }
 
     header h1 {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       opacity: 0.9;
     }
 
-    /* Contact Section */
-    .contact-section {
-      padding: 60px 30px;
+    /* Privacy Content */
+    .privacy-content {
       max-width: 800px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      margin: 40px auto;
+      padding: 0 16px;
     }
 
-    .contact-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      text-align: center;
+    .privacy-section {
+      margin-bottom: 32px;
     }
 
-    .info {
-      margin-bottom: 40px;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .info a {
+    .privacy-section h2 {
       color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
     }
 
-    .form-wrapper iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    .privacy-section p {
+      margin-bottom: 16px;
+      line-height: 1.7;
     }
 
+    .privacy-section ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    .privacy-section li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
     footer {
       background-color: var(--bg-dark);
       color: var(--text-light);
       text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      margin-top: 60px;
+      padding: 24px 16px;
+      font-size: 0.85rem;
     }
 
     /* Responsive Styles */
@@ -204,7 +193,7 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      /* Adjust dropdown for mobile */
+      /* Mobile dropdown adjustments */
       .dropdown {
         width: 100%;
       }
@@ -213,7 +202,6 @@
         width: 100%;
         border-radius: 0;
       }
-      /* Disable hover trigger on mobile */
       .dropdown:hover .dropdown-content {
         display: none;
       }
@@ -244,21 +232,48 @@
 
   <!-- HEADER -->
   <header>
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you</p>
+    <h1>Privacy Policy</h1>
+    <p>Your privacy is our priority</p>
   </header>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section">
-    <h2>Reach Out to SnapOrtho</h2>
-    <div class="info">
-      📧 Email: <a href="mailto:alexbaur123@gmail.com">alexbaur123@gmail.com</a><br><br>
-      🐦 X (Twitter): <a href="https://x.com/snaportho" target="_blank">@snaportho</a>
+  <!-- PRIVACY CONTENT -->
+  <main class="privacy-content">
+    <div class="privacy-section">
+      <h2>Introduction</h2>
+      <p>
+        At SnapOrtho, we respect your privacy and are committed to protecting your personal information. This policy explains how we handle data when you use our app.
+      </p>
     </div>
-    <div class="form-wrapper">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5EVQlffTLq_iRGHIt5TPvZuClJ_EMzqredZP9xptc0NpPdg/viewform?embedded=true" allowfullscreen>Loading…</iframe>
+
+    <div class="privacy-section">
+      <h2>Information We Collect</h2>
+      <p>
+        We do not collect any personal information at this time.
+      </p>
     </div>
-  </section>
+
+    <div class="privacy-section">
+      <h2>Data Security</h2>
+      <p>
+        Although we don’t collect personal information, we maintain robust security measures to protect any anonymous data used to improve our app experience. However, no method of transmission over the Internet is 100% secure.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Please review this policy periodically.
+      </p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions or concerns about this Privacy Policy, please contact us at 
+        <a href="mailto:alexbaur123@gmail.com" style="color: var(--accent); text-decoration: none;">alexbaur123@gmail.com</a>.
+      </p>
+    </div>
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -267,17 +282,16 @@
 
   <!-- JavaScript for Toggling Menus -->
   <script>
-    // Toggle the main navigation links on mobile
+    // Toggle the main navigation menu on mobile
     document.querySelector('.menu-toggle').addEventListener('click', function() {
       document.querySelector('.nav-links').classList.toggle('active');
     });
 
-    // Toggle dropdown menu on mobile
+    // Toggle the dropdown submenu on mobile
     document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        const dropdownContent = this.nextElementSibling;
-        // Toggle display state manually on mobile
+        var dropdownContent = this.nextElementSibling;
         if (dropdownContent.style.display === 'block') {
           dropdownContent.style.display = 'none';
         } else {
