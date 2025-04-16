@@ -36,7 +36,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 28px;
-      flex-wrap: wrap;
+      /* The original code did not use flex-wrap; we add it only for mobile via media queries */
     }
 
     .nav-logo {
@@ -62,16 +62,6 @@
       color: var(--accent);
     }
 
-    /* Hamburger menu for mobile */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
-    }
-
     .dropdown {
       position: relative;
     }
@@ -83,6 +73,10 @@
       border-radius: 6px;
       min-width: 140px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .dropdown-content a {
@@ -97,22 +91,24 @@
       background-color: #39465a;
     }
 
-    /* On desktop, display dropdown on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Mobile dropdown toggle button */
-    .dropdown-toggle {
-      display: none;
+    /* Mobile-specific navigation fixes */
+    .menu-toggle, .dropdown-toggle {
       background: none;
       border: none;
-      font-size: 1rem;
       color: white;
       cursor: pointer;
+    }
+    .menu-toggle {
+      font-size: 1.8rem;
+      display: none; /* hidden on desktop */
+    }
+    .dropdown-toggle {
+      font-size: 1rem;
       margin-left: 5px;
+      display: none; /* hidden on desktop */
     }
 
+    /* Header */
     header {
       background-color: var(--bg-dark);
       color: var(--text-light);
@@ -125,6 +121,7 @@
       font-weight: 700;
     }
 
+    /* Content */
     .content {
       max-width: 1000px;
       margin: 24px auto;
@@ -141,11 +138,145 @@
       margin-bottom: 14px;
     }
 
-    /* Media queries for mobile devices */
+    /* Mission Section */
+    .mission-section {
+      background-color: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .mission-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mission-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+      color: #1f2937;
+    }
+
+    .mission-text hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 16px 0;
+    }
+
+    .mission-icons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .icon-box {
+      flex: 1 1 30%;
+      background-color: #f3f4f6;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+      text-align: center;
+      transition: transform 0.2s ease;
+      min-width: 200px;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-box span {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .icon-box h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .icon-box p {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    /* Team Section */
+    .team-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .member-card {
+      flex: 0 0 200px;
+      background: white;
+      padding: 14px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      text-align: center;
+      scroll-snap-align: start;
+    }
+
+    .member-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .member-card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .member-card span {
+      font-size: 0.82rem;
+      color: #555;
+    }
+
+    /* Consultants Section */
+    .consultants-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .consultants-box p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Styles for Navigation */
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .menu-toggle {
         display: block;
       }
+
       .nav-links {
         width: 100%;
         flex-direction: column;
@@ -154,25 +285,27 @@
         margin-top: 10px;
         display: none;
       }
+
       .nav-links.active {
         display: flex;
       }
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      /* Adjust dropdown on mobile */
+
+      /* Adjust dropdown for mobile */
       .dropdown {
         width: 100%;
       }
+
       .dropdown-content {
         position: static;
         width: 100%;
         border-radius: 0;
       }
+
+      /* Disable hover trigger on mobile */
       .dropdown:hover .dropdown-content {
         display: none;
       }
+
       .dropdown-toggle {
         display: inline-block;
       }
@@ -188,7 +321,7 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="snaportho.html" class="dropbtn">SnapOrtho</a>
+        <a href="snaportho.html" class="dropbtn">SnapOrtho ▾</a>
         <button class="dropdown-toggle">&#9662;</button>
         <div class="dropdown-content">
           <a href="aboutsnaportho.html">About</a>
@@ -204,6 +337,7 @@
   </header>
 
   <div class="content">
+
     <div class="section mission-section">
       <h2>Our Mission</h2>
       <div class="mission-grid">
@@ -270,13 +404,14 @@
         </p>
       </div>
     </div>
+
   </div>
 
   <footer>
     &copy; 2025 MyOrtho Solutions. All rights reserved.
   </footer>
 
-  <!-- JavaScript for toggling menus -->
+  <!-- JavaScript for Toggling Menus -->
   <script>
     // Toggle the main navigation menu on mobile
     document.querySelector('.menu-toggle').addEventListener('click', function() {
