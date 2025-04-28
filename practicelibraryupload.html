@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f9fc;
+      background-color: #f7f9fc;
       overflow-x: hidden;
     }
     header {
@@ -66,16 +66,47 @@
       margin-bottom: 30px;
       line-height: 1.7;
     }
-    iframe {
-      width: 100%;
-      height: 600px; /* Reduced height */
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
     .highlight {
       color: #d4af37; /* GOLDEN BONE COLOR */
       font-weight: bold;
+    }
+    /* BIG Contribute section */
+    .contribute-section {
+      background: linear-gradient(135deg, #0070f3 0%, #005bb5 100%);
+      color: white;
+      margin: 60px auto 20px;
+      padding: 60px 40px;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 850px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
+    .contribute-section h3 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+    .contribute-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    .contribute-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 18px 36px;
+      background-color: #ffffff;
+      color: #005bb5;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .contribute-button:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
     }
     .disclaimer {
       max-width: 850px;
@@ -109,18 +140,20 @@
       Upload a single X-ray, an entire fracture conference, or anything in between — <br>
       Your contribution can <span class="highlight">inspire the next generation</span> and shape the future of orthopaedics.
     </p>
+  </div>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEF-jZh7nzsAlGD4MGaE1lpngeHLnPn5NNsBHzcnXk-NSYPA/viewform?embedded=true" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-      Loading…
-    </iframe>
+  <!-- BIG CONTRIBUTE SECTION -->
+  <div class="contribute-section">
+    <h3>Ready to Make an Impact?</h3>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEF-jZh7nzsAlGD4MGaE1lpngeHLnPn5NNsBHzcnXk-NSYPA/viewform" 
+       target="_blank" 
+       class="contribute-button">
+      Contribute Now
+    </a>
+  </div>
 
-    <div class="disclaimer">
-      <strong>Disclaimer:</strong> All submitted materials will undergo rigorous quality control prior to publication. SnapOrtho will carefully review each submission to ensure full compliance with HIPAA regulations and copyright standards. No patient-identifying information (such as names, birthdates, or medical record numbers) will be published. Submissions are used solely for educational purposes within the SnapOrtho Practice Library. Contributors retain rights to their submitted materials. This practice feature will always remain <strong>completely free</strong> for students, residents, and educators.
-    </div>
-
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> All submitted materials will undergo rigorous quality control prior to publication. SnapOrtho will carefully review each submission to ensure full compliance with HIPAA regulations and copyright standards. No patient-identifying information (such as names, birthdates, or medical record numbers) will be published. Submissions are used solely for educational purposes within the SnapOrtho Practice Library. Contributors retain rights to their submitted materials. This practice feature will always remain <strong>completely free</strong> for students, residents, and educators.
   </div>
 
 </body>
