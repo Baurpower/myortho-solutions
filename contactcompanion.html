@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | MyOrtho Companion</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1f2937;
+      --text-light: #ffffff;
+      --text-dark: #111827;
+      --accent: #10b981;
+      --accent-hover: #059669;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--bg-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2d3748;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3b4656;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: white;
+      margin-left: 5px;
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .contact-section {
+      padding: 60px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .info {
+      margin-bottom: 40px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .form-wrapper iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .dropdown {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: none;
+      }
+
+      .dropdown-toggle {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
+    <button class="menu-toggle">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="myorthocompanion.html" class="dropbtn">MyOrtho Companion</a>
+        <button class="dropdown-toggle">&#9662;</button>
+        <div class="dropdown-content">
+          <a href="aboutmyorthocompanion.html">About</a>
+          <a href="contactmyorthocompanion.html">Contact</a>
+          <a href="privacymyorthocompanion.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you about MyOrtho Companion</p>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2>Reach Out to MyOrtho Companion</h2>
+    <div class="info">
+      📧 Email: <a href="mailto:alexbaur123@gmail.com">alexbaur123@gmail.com</a><br><br>
+      🐦 X (Twitter): <a href="https://x.com/myorthocompanion" target="_blank">@myorthocompanion</a>
+    </div>
+    <div class="form-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMCp3-eZv2AzG6f_Ljej78Op19CBZ11qWnmxTCLDtsNohAAA/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 MyOrtho Solutions. All rights reserved.
+  </footer>
+
+  <!-- JS for menu toggle -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
