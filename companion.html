@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyOrtho Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1f2937;
+      --text-light: #ffffff;
+      --text-dark: #111827;
+      --accent: #10b981;
+      --accent-hover: #059669;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--bg-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 60px 20px 80px;
+    }
+
+    header img.logo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .store-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .store-button:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.05);
+    }
+
+    /* Carousel */
+    .carousel-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .carousel-title {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-slide {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: center;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .carousel-slide:hover {
+      transform: scale(1.03);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-btn.prev {
+      left: 0;
+    }
+
+    .carousel-btn.next {
+      right: 0;
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .carousel-btn {
+        font-size: 1.5rem;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="companion.html">Companion</a>
+    <a href="privacycompanion.html">Privacy</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <img src="myortho-companion-logo.jpg" alt="MyOrtho Companion Logo" class="logo" />
+  <h1>MyOrtho Companion</h1>
+  <p>Your personal guide through knee replacement.</p>
+  <a href="https://apps.apple.com/us/app/myortho-companion/id0000000000" class="store-button" target="_blank">Download on the App Store</a>
+</header>
+
+<!-- CAROUSEL -->
+<section class="carousel-container">
+  <h2 class="carousel-title">Preview the App</h2>
+  <button class="carousel-btn prev">&#10094;</button>
+  <div class="carousel-wrapper" id="carouselTrack">
+    <div class="carousel-slide"><img src="companion1.png" alt="Screenshot 1" /></div>
+    <div class="carousel-slide"><img src="companion2.png" alt="Screenshot 2" /></div>
+    <div class="carousel-slide"><img src="companion3.png" alt="Screenshot 3" /></div>
+    <div class="carousel-slide"><img src="companion4.png" alt="Screenshot 4" /></div>
+  </div>
+  <button class="carousel-btn next">&#10095;</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 MyOrtho Solutions. All rights reserved.
+</footer>
+
+<!-- JavaScript -->
+<script>
+  const carousel = document.getElementById("carouselTrack");
+  const nextBtn = document.querySelector(".carousel-btn.next");
+  const prevBtn = document.querySelector(".carousel-btn.prev");
+
+  nextBtn.addEventListener("click", () => {
+    carousel.scrollBy({ left: 320, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    carousel.scrollBy({ left: -320, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
