@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirm Email | SnapOrtho</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1f2937;
+      --text-light: #ffffff;
+      --text-dark: #111827;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    nav {
+      background-color: var(--bg-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-size: 1.4rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .confirmation-box {
+      background-color: white;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    .confirmation-box h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .confirmation-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+    .confirmation-box .btn {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: var(--accent);
+      color: white;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .confirmation-box .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+      .nav-links.active { display: flex; }
+      nav { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
+  <button class="menu-toggle">&#9776;</button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="snaportho.html">SnapOrtho</a>
+    <a href="contactsnaportho.html">Contact</a>
+    <a href="practicelibraryupload.html">Contribute</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h1>Confirm Your Email</h1>
+  <p>Thanks for signing up! You're almost there. Just one more step to get started with SnapOrtho.</p>
+</header>
+
+<!-- CONFIRMATION BOX -->
+<section class="confirmation-box">
+  <h2>📧 Check Your Inbox</h2>
+  <p>
+    We've sent a confirmation email to your address. Please open it and click the link inside to verify your account.
+  </p>
+  <p>
+    Didn't receive the email? Be sure to check your spam or promotions folder.
+  </p>
+  <a href="mailto:support@myorthosolutions.com" class="btn">Still need help?</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 MyOrtho Solutions. All rights reserved.
+</footer>
+
+<!-- JS for toggle menu -->
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
