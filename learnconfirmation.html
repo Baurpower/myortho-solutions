@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Confirm Email | SnapOrtho</title>
+  <title>Welcome to SnapOrtho</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
@@ -27,6 +27,7 @@
       color: var(--text-dark);
       line-height: 1.6;
     }
+
     nav {
       background-color: var(--bg-dark);
       display: flex;
@@ -35,26 +36,31 @@
       padding: 20px 40px;
       flex-wrap: wrap;
     }
+
     .nav-logo {
       font-size: 1.4rem;
       color: white;
       font-weight: bold;
       text-decoration: none;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: 30px;
     }
+
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
+
     .nav-links a:hover {
       color: var(--accent);
     }
+
     .menu-toggle {
       display: none;
       background: none;
@@ -68,12 +74,14 @@
       background-color: var(--bg-dark);
       color: var(--text-light);
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px 60px;
     }
+
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
+
     header p {
       font-size: 1.2rem;
       max-width: 600px;
@@ -90,15 +98,18 @@
       text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
+
     .confirmation-box h2 {
       font-size: 2rem;
       color: var(--accent);
       margin-bottom: 20px;
     }
+
     .confirmation-box p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #333;
     }
+
     .confirmation-box .btn {
       display: inline-block;
       margin-top: 30px;
@@ -110,8 +121,21 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
+
     .confirmation-box .btn:hover {
       background-color: var(--accent-hover);
+    }
+
+    .social-links {
+      margin-top: 25px;
+      font-size: 0.95rem;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
@@ -139,7 +163,7 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
   <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
   <button class="menu-toggle">&#9776;</button>
@@ -153,20 +177,24 @@
 
 <!-- HEADER -->
 <header>
-  <h1>Confirm Your Email</h1>
-  <p>Thanks for signing up! You're almost there. Just one more step to get started with SnapOrtho.</p>
+  <h1>🎉 Welcome to SnapOrtho!</h1>
+  <p>You're officially part of the SnapOrtho community—where orthopaedic mastery begins.</p>
 </header>
 
-<!-- CONFIRMATION BOX -->
+<!-- CONFIRMATION CONTENT -->
 <section class="confirmation-box">
-  <h2>📧 Check Your Inbox</h2>
-  <p>
-    We've sent a confirmation email to your address. Please open it and click the link inside to verify your account.
-  </p>
-  <p>
-    Didn't receive the email? Be sure to check your spam or promotions folder.
-  </p>
-  <a href="mailto:support@myorthosolutions.com" class="btn">Still need help?</a>
+  <h2>✅ Email Confirmed</h2>
+  <p>We’re thrilled to have you join us! You now have full access to your SnapOrtho account.</p>
+  <p>Start exploring, learning, and leveling up your orthopaedic knowledge.</p>
+
+  <a href="https://apps.apple.com/us/app/snaportho/id6742800145" class="btn" target="_blank">Open the App</a>
+
+  <div class="social-links">
+    Follow us for updates:
+    <a href="https://instagram.com/snaportho" target="_blank">Instagram</a> |
+    <a href="https://twitter.com/snaportho" target="_blank">Twitter</a> |
+    <a href="https://tiktok.com/@snaportho" target="_blank">TikTok</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -174,7 +202,7 @@
   &copy; 2025 MyOrtho Solutions. All rights reserved.
 </footer>
 
-<!-- JS for toggle menu -->
+<!-- JS for mobile nav toggle -->
 <script>
   document.querySelector('.menu-toggle').addEventListener('click', function () {
     document.querySelector('.nav-links').classList.toggle('active');
