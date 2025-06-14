@@ -221,24 +221,88 @@
   </style>
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html" class="nav-logo">MyOrtho Solutions</a>
-    <button class="menu-toggle">&#9776;</button>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <a href="myorthocompanion.html" class="dropbtn">MyOrtho Companion</a>
-        <button class="dropdown-toggle">&#9662;</button>
-        <div class="dropdown-content">
-          <a href="aboutmyorthocompanion.html">About</a>
-          <a href="contactmyorthocompanion.html">Contact</a>
-          <a href="privacymyorthocompanion.html">Privacy</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+ <!-- NAVIGATION -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">MyOrtho Companion</a>
+  <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="companion.html">The App</a>
+    <a href="aboutcompanion.html">Our Story</a>
+    <a href="contactcompanion.html">Contact</a>
+    <a href="privacycompanion.html">Privacy</a>
+  </div>
+</nav>
 
+<style>
+  .navbar {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #10b981;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
   <!-- HEADER -->
   <header>
     <h1>Contact Us</h1>

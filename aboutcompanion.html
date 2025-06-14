@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About MyOrtho Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f9fafb;
+      --bg-dark: #1f2937;
+      --text-light: #ffffff;
+      --text-dark: #111827;
+      --accent: #10b981;
+      --accent-hover: #059669;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    nav {
+      background-color: var(--bg-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header img.logo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section.about {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+
+    section.about h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+    }
+
+    section.about h3 {
+      font-size: 1.25rem;
+      margin-top: 2.5rem;
+      color: #1f2937;
+    }
+
+    section.about p {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #374151;
+    }
+
+    section.about ul {
+      padding-left: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    section.about li {
+      margin-bottom: 0.6rem;
+      color: #374151;
+    }
+
+    .highlight-box {
+      background-color: #ecfdf5;
+      border-left: 4px solid var(--accent);
+      padding: 24px;
+      margin: 40px 0;
+      border-radius: 8px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      color: #065f46;
+      font-weight: 500;
+    }
+
+    .section-divider {
+      margin: 60px auto;
+      height: 1px;
+      width: 80%;
+      background-color: #e5e7eb;
+    }
+
+    footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">MyOrtho Companion</a>
+  <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="companion.html">The App</a>
+    <a href="aboutcompanion.html">Our Story</a>
+    <a href="contactcompanion.html">Contact</a>
+    <a href="privacycompanion.html">Privacy</a>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #10b981;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("active");
+    });
+  });
+</script>
+
+
+<!-- HEADER -->
+<header>
+  <img src="myortho-companion-logo.jpg" alt="MyOrtho Companion Logo" class="logo" />
+  <h1>About MyOrtho Companion- Knee</h1>
+  <p>Guiding patients confidently through every stage of knee replacement.</p>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+  <div class="highlight-box">
+    <p>
+      MyOrtho Companion began after watching my father-in-law struggle through a knee replacement recovery that was confusing, fragmented, and ultimately led to a reoperation. He didn’t know what to expect, got conflicting advice from his care team, and became discouraged. I built this app for people like him—so no one feels lost during recovery again.
+    </p>
+  </div>
+
+  <h2>Why We Exist</h2>
+  <p>Many knee replacement patients face uncertainty, conflicting guidance, and lack of motivation. We created MyOrtho Companion to make recovery clear, consistent, and empowering—bridging the gap between the surgeon, the therapist, and the patient.</p>
+
+  <div class="section-divider"></div>
+
+  <h2>The Journey</h2>
+
+  <h3>1. Pre-Treatment Tracking</h3>
+  <p>Patients log symptoms, treatments, and pain history to build a clear picture of their knee health and treatment path—helping them and their surgeon decide the right time for surgery.</p>
+
+  <h3>2. Preparing for Surgery</h3>
+  <p>We emphasize expectation setting, education, and mental readiness. Journaling and self-reflection tools help patients feel more in control and reduce anxiety about what’s ahead.</p>
+
+  <h3>3. Recovery and Rehab</h3>
+  <p>The Activity Dashboard encourages daily movement—not just formal PT. Patients track small wins like walking to the mailbox or cooking dinner, and unlock motivational achievements to stay engaged.</p>
+
+  <div class="section-divider"></div>
+
+  <h2>What Makes It Different</h2>
+  <p>This isn’t just another health tracker. It’s a full companion—from your first step on the treatment ladder to your final milestone in recovery. The app builds confidence through simplicity, motivation through structure, and results through consistency.</p>
+
+  <h3>Smart Features That Matter:</h3>
+  <ul>
+    <li>Pre-op journaling and treatment ladder visualization</li>
+    <li>Educational content that’s actually understandable</li>
+    <li>Daily rehab tracking and activity rewards</li>
+    <li>Shareable progress data with your care team</li>
+  </ul>
+
+  <h2>Our Mission</h2>
+  <p>Recovery isn’t just about physical therapy—it’s about mindset, expectations, and everyday life. We’re here to make that journey easier, clearer, and more successful for every patient who opens the app.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2025 MyOrtho Solutions. All rights reserved.
+</footer>
+
+</body>
+</html>
